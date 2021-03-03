@@ -6,7 +6,5 @@ const assertEqual = function(actual, expected) {
   }
 };
 
-
-
 // eslint-disable-next-line no-undef
 module.exports = assertEqual;
