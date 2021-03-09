@@ -1,16 +1,13 @@
-import eqArrays from './eqArrays';
+/* eslint-disable no-undef */
+const eqArrays = require('./eqArrays');
 
-
-  const assertArraysEqual = function(arr1,arr2){
-    const result = eqArrays(arr1,arr2)
-      if (!result){
-          console.log(`❌ ❌ ❌: Ops these are not equal `)
+const assertArraysEqual = function(actual, expected) {
+  if (eqArrays(actual, expected)) {
+    console.log(`✅✅✅ Assertion Passed: "${actual}" === "${expected}"`);
+  } else {
+    cconsole.log(`🛑🛑🛑 Assertion Failed: "${actual}" !== "${expected}"`);
+    console.log(`🛑🛑🛑 Assertion Failed: "${actual}" !== "${expected}"`);
       }
-      else {
-          console.log(`✅ ✅ ✅ : Congratulations! These are equal`)
-                  return eqArrays
+    };
 
-      }
-  }
-  export default assertArraysEqual;
-
+module.exports = assertArraysEqual;
